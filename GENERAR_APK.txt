@@ -1,0 +1,8 @@
+# 1. Limpiar
+flutter clean
+
+# 2. Obtener dependencias
+flutter pub get
+
+# 3. Generar APK universal (funciona en todos los dispositivos)
+flutter build apk --debug --verbose
