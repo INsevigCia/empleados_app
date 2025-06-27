@@ -4,7 +4,7 @@ import '../config/supabase_config.dart';
 
 // 🚀 Servicio de Empleados - Conecta con Supabase
 class EmpleadosService {
-  final SupabaseClient _supabase = Supabase.instance.client;
+  //final SupabaseClient _supabase = Supabase.instance.client;
 
   // 🔍 Búsqueda optimizada - FUNCIÓN PRINCIPAL
   Future<List<Empleado>> buscarEmpleados(String termino) async {
