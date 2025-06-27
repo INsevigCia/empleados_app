@@ -1,9 +1,9 @@
 name: Build iOS App
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:  # Permite ejecutar manualmente
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.19.0'
+        flutter-version: '3.19.0'  # Usa la versión estable
         channel: 'stable'
         
     - name: Flutter doctor
@@ -26,6 +26,12 @@ jobs:
       
     - name: Get dependencies
       run: flutter pub get
+      
+    - name: Analyze code
+      run: flutter analyze
+      
+    - name: Run tests
+      run: flutter test
       
     - name: Build iOS (no codesign)
       run: flutter build ios --release --no-codesign
