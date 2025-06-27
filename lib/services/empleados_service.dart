@@ -1,4 +1,4 @@
-import 'package:supabase_flutter/supabase_flutter.dart';
+//import 'package:supabase_flutter/supabase_flutter.dart';
 import '../models/empleado_model.dart';
 import '../config/supabase_config.dart';
 
