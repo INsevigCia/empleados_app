@@ -30,7 +30,7 @@ dependency_overrides:
   typed_data: ^1.4.0
   vector_math: ^2.1.4
   
-  # Core dependencies
+  # Core dependencies - FIXED VERSION
   meta: ^1.14.0
   collection: ^1.18.0
   material_color_utilities: ^0.8.0
