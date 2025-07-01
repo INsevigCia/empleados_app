@@ -1,7 +1,6 @@
 name: empleados_app
 description: App para ver empleados desde Supabase
 publish_to: 'none'
-
 version: 1.0.0+1
 
 environment:
@@ -11,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  # supabase_flutter: ^2.5.8  # TEMPORALMENTE COMENTADO
+  supabase_flutter: ^2.5.8  # ✅ DESCOMENTADO - NECESARIO PARA iOS
   provider: ^6.1.2
   intl: ^0.19.0
   http: ^1.2.1
