@@ -49,7 +49,7 @@ class EmpleadosApp extends StatelessWidget {
           ),
         ),
       ),
-      home: EmpleadosScreen(), // Pantalla principal
+      home: const EmpleadosScreen(), // Pantalla principal
     );
   }
 }
