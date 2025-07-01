@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  supabase_flutter: ^2.5.8  # ✅ DESCOMENTADO - NECESARIO PARA iOS
+  supabase_flutter: ^2.5.8  # ✅ YA FUNCIONA
   provider: ^6.1.2
   intl: ^0.19.0
   http: ^1.2.1
@@ -32,7 +32,7 @@ dependency_overrides:
   # Core dependencies - FIXED VERSION
   meta: ^1.14.0
   collection: ^1.18.0
-  material_color_utilities: ^0.8.0
+  # material_color_utilities: ^0.8.0  # ✅ COMENTAR ESTA LÍNEA (causa el error)
   
   # VM and services
   vm_service: ^14.2.4
