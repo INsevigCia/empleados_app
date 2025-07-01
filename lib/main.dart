@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart'; // ✅ SOLO DESCOMENTA ESTA LÍNEA
+import 'package:supabase_flutter/supabase_flutter.dart'; // ✅ DESCOMENTADO
 import 'config/supabase_config.dart';
 import 'screens/empleados_screen.dart';
 
@@ -49,7 +49,7 @@ class EmpleadosApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const EmpleadosScreen(), // Pantalla principal
+      home: EmpleadosScreen(), // ✅ SIN CONST - ARREGLADO
     );
   }
 }
