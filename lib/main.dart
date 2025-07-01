@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:supabase_flutter/supabase_flutter.dart'; // ✅ DESCOMENTADO
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'config/supabase_config.dart';
+
+// 🔍 IMPORT CORRECTO - Cambiar según tu estructura de archivos:
 import 'screens/empleados_screen.dart';
 
 // 🚀 Función principal de la app
@@ -10,7 +12,7 @@ void main() async {
   // 🔧 Inicializar Supabase
   await Supabase.initialize(
     url: SupabaseConfig.supabaseUrl,
-    anonKey: SupabaseConfig.supabaseServiceKey, // 🔧 Usando SERVICE KEY para saltarse RLS
+    anonKey: SupabaseConfig.supabaseServiceKey,
   );
   
   runApp(EmpleadosApp());
@@ -18,18 +20,18 @@ void main() async {
 
 // 📱 Aplicación principal
 class EmpleadosApp extends StatelessWidget {
+  const EmpleadosApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '👥 Empleados App',
-      debugShowCheckedModeBanner: false, // Quitar banner "DEBUG"
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // 🎨 Tema principal de la app
         primarySwatch: Colors.blue,
         primaryColor: Colors.blue[700],
         visualDensity: VisualDensity.adaptivePlatformDensity,
         
-        // 📊 Tema para AppBar
         appBarTheme: AppBarTheme(
           backgroundColor: Colors.blue[700],
           foregroundColor: Colors.white,
@@ -37,19 +39,18 @@ class EmpleadosApp extends StatelessWidget {
           centerTitle: true,
         ),
         
-        // 🔘 Tema para botones
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.blue[700],
             foregroundColor: Colors.white,
-            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
             ),
           ),
         ),
       ),
-      home: EmpleadosScreen(), // ✅ SIN CONST - ARREGLADO
+      home: const EmpleadosScreen(),
     );
   }
 }
